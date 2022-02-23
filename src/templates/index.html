@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Hello
+
+        </title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1>
+            おみくじ
+        </h1>
+        <hr>
+        <p>運勢一覧</p>
+        {% for item in omikuji %}
+        <p>{{ item }}</p>
+        {% endfor %}
+        <hr>
+        <p>{{ now }}の運勢！</p>
+        <p>{{ unsei }}</p>
+        {% if unsei == "大凶" %}
+        <img src="https://file.booyah.dev/tmp/void-penguin.png" />
+        {% endif %}
+    </body>
+
+</html>
